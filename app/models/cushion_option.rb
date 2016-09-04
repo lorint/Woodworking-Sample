@@ -1,0 +1,2 @@
+class CushionOption < Option
+end

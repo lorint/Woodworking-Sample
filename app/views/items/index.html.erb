@@ -1,0 +1,10 @@
+Stuff you have ordered:
+<!-- Combination of item and option -->
+<% last_item_id = nil
+   @item_options.each do |item_option| %>
+   <% unless last_item_id == item_option.id %>
+	   <hr><h2><%= item_option.name %></h2>
+   <% end %>
+   <%= item_option.option_name %><br>
+   <% last_item_id = item_option.id %>
+<% end %>

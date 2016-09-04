@@ -1,0 +1,12 @@
+<% @items.each do |item| %>
+  <%= form_for item do |f| %>
+    Want a <%= item.product.name %>?
+    <%= f.hidden_field :product_id, value: item.product_id %>
+    <%= f.fields_for :item_options do |builder| %>
+    	<%= builder.object.option_type.name %>:
+    	<%= builder.collection_select :option_id, builder.object.options, :id, :name %>
+    <% end %>
+  	<%= f.submit %>
+  <% end %>
+  <hr>
+<% end %>

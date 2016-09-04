@@ -1,0 +1,2 @@
+class CoveringOption < Option
+end

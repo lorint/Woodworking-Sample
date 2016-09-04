@@ -1,0 +1,2 @@
+class WoodOption < Option
+end
